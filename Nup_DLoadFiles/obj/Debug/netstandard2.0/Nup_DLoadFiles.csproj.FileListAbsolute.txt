@@ -1,0 +1,9 @@
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_DLoadFiles\bin\Debug\netstandard2.0\Nup_DLoadFiles.deps.json
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_DLoadFiles\bin\Debug\netstandard2.0\Nup_DLoadFiles.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_DLoadFiles\bin\Debug\netstandard2.0\Nup_DLoadFiles.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_DLoadFiles\obj\Debug\netstandard2.0\Nup_DLoadFiles.csprojAssemblyReference.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_DLoadFiles\obj\Debug\netstandard2.0\Nup_DLoadFiles.csproj.CoreCompileInputs.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_DLoadFiles\obj\Debug\netstandard2.0\Nup_DLoadFiles.AssemblyInfoInputs.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_DLoadFiles\obj\Debug\netstandard2.0\Nup_DLoadFiles.AssemblyInfo.cs
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_DLoadFiles\obj\Debug\netstandard2.0\Nup_DLoadFiles.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_DLoadFiles\obj\Debug\netstandard2.0\Nup_DLoadFiles.pdb

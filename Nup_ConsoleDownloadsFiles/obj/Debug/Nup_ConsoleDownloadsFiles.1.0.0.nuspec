@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Nup_ConsoleDownloadsFiles</id>
+    <version>1.0.0</version>
+    <authors>Nup_ConsoleDownloadsFiles</authors>
+    <owners>Nup_ConsoleDownloadsFiles</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="HtmlAgilityPack" version="1.11.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.NETCore.App" version="2.1.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\bin\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.runtimeconfig.json" target="lib\netcoreapp2.1\Nup_ConsoleDownloadsFiles.runtimeconfig.json" />
+    <file src="C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\bin\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.dll" target="lib\netcoreapp2.1\Nup_ConsoleDownloadsFiles.dll" />
+  </files>
+</package>
