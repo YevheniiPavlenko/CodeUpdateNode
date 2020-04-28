@@ -81,7 +81,7 @@ namespace NodDownloadConsoleApp
             //int resVer_Count = 0;
             //string tres;
 
-            //wc = new WebClient();
+            wc = new WebClient();
             //HtmlDocument xDoc = new HtmlDocument();
             //xDoc.Load(wc.OpenRead(xUri));
             //tresDownNup = new string[xDoc.DocumentNode.SelectNodes("//a[@href]").Count];
@@ -101,7 +101,7 @@ namespace NodDownloadConsoleApp
             //    }
             //}
 
-            resultParserUri = AllProg.findAllLink(xUri);
+            resultParserUri = AllProg.findAllLink(xUri, true);
 
             //This Block find from top data, wish generate left Block, data what == ".NUM " Or  == ".VER"
             if (resultParserUri != null)

@@ -127,9 +127,9 @@ namespace NodDownloadConsoleApp
             }
         }
 
-        static public string[] findAllLink(Uri x_uri)
+        static public string[] findAllLink(Uri x_uri, bool downloadAll = false)
         {
-            WebClient wc;
+            WebClient x_wc;
             string[] tresDownNup;
             string[] resDownNup;
             int resCount = 0;
@@ -137,9 +137,9 @@ namespace NodDownloadConsoleApp
             int resVer_Count = 0;
             string tres;
 
-            wc = new WebClient();
+            x_wc = new WebClient();
             HtmlDocument xDoc = new HtmlDocument();
-            xDoc.Load(wc.OpenRead(x_uri));
+            xDoc.Load(x_wc.OpenRead(x_uri));
             tresDownNup = new string[xDoc.DocumentNode.SelectNodes("//a[@href]").Count];
 
             //This Block find All tag from exists links
@@ -157,7 +157,7 @@ namespace NodDownloadConsoleApp
                 }
             }
 
-            if ((resNUP_Ver > 0) && (resVer_Count > 0))
+            if (((resNUP_Ver > 0) && (resVer_Count > 0)) || (downloadAll = true))
             {
                 resDownNup = new string[resNUP_Ver];
                 int tmpX = 0;
