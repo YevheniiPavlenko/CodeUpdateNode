@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 //using System.Windows.Forms;
 using System.IO;
 using System.Net;
-using HtmlAgilityPack;
+//using HtmlAgilityPack;
 
 namespace NodDownloadConsoleApp
 {
@@ -22,8 +22,9 @@ namespace NodDownloadConsoleApp
         //    //Application.Run(new Form1());
         //}
         static WebClient wc;
-        static string[] tresDownNup;
-        static string[] resDownNup;
+        static string[] resultParserUri;
+        //static string[] tresDownNup;
+        //static string[] resDownNup;
 
         //-----------------------------------------------------------------------
         //Default param
@@ -32,6 +33,8 @@ namespace NodDownloadConsoleApp
         static Uri xUri = new Uri(@"http://nod.gorod.nu/eset_upd/");
         static string xPatch = AppDomain.CurrentDomain.BaseDirectory + @"New";
         //-----------------------------------------------------------------------
+
+        
 
         static void Main(string[] args)
         {
@@ -55,21 +58,11 @@ namespace NodDownloadConsoleApp
 
                     for (int xI = 1; xI <= args.Length-1; xI++)
                     {
-                        //if ((args[xI] != "-l") && (xtOpenUri == "null")) { xtOpenUri = "no"; } else { xtOpenUri = "yes"; }
                         if (args[xI] == "-l") { xtOpenUri = "yes"; }
                     }
                     
                     OpenUrl(xtOpenUri);
-
-                    //if (args.Length == 2)
-                    //{
-                    //    if (args[1] == "-l") { OpenUrl("yes"); }
-                    //    else { OpenUrl("no"); }
-                    //}
-                    //else { OpenUrl("yes"); }
-
                 }
-                //else { Console.WriteLine($" {args}"); }
             }
             else
             {
@@ -80,48 +73,53 @@ namespace NodDownloadConsoleApp
             }
         }
 
+        //Предназначена для чтения и загрузки всех файлов *.NUP и *.VER с доступного Web ресурса
         static void OpenUrl(string xWriteConsoleText)
         {
-            int resCount = 0;
-            int resNUP_Ver = 0;
-            string tres;
+            //int resCount = 0;
+            //int resNUP_Ver = 0;
+            //int resVer_Count = 0;
+            //string tres;
 
-            wc = new WebClient();
-            HtmlDocument xDoc = new HtmlDocument();
-            xDoc.Load(wc.OpenRead(xUri));
-            tresDownNup = new string[xDoc.DocumentNode.SelectNodes("//a[@href]").Count];
+            //wc = new WebClient();
+            //HtmlDocument xDoc = new HtmlDocument();
+            //xDoc.Load(wc.OpenRead(xUri));
+            //tresDownNup = new string[xDoc.DocumentNode.SelectNodes("//a[@href]").Count];
 
-            //This Block find All tag from exists links
-            foreach (HtmlNode a in xDoc.DocumentNode.SelectNodes("//a[@href]"))
-            {
-                tresDownNup[resCount] = xUri.ToString() + a.Attributes["href"].Value;
-                resCount++;
+            ////This Block find All tag from exists links
+            //foreach (HtmlNode a in xDoc.DocumentNode.SelectNodes("//a[@href]"))
+            //{
+            //    tresDownNup[resCount] = xUri.ToString() + a.Attributes["href"].Value;
+            //    resCount++;
 
-                tres = (tresDownNup[resCount - 1].Split('.')[tresDownNup[resCount - 1].Split('.').Length - 1]).ToUpper();
-                if ((tres == ("nup").ToUpper()) || (tres == ("ver").ToUpper()))
-                {
-                    resNUP_Ver++;
-                    //Console.WriteLine(tres);
-                }
-            }
+            //    tres = (tresDownNup[resCount - 1].Split('.')[tresDownNup[resCount - 1].Split('.').Length - 1]).ToUpper();
+            //    if ((tres == ("nup").ToUpper()) || (tres == ("ver").ToUpper()))
+            //    {
+            //        resNUP_Ver++;
+            //        //Console.WriteLine(tres);
+            //        if (tres == ("ver").ToUpper()) { resVer_Count++; }
+            //    }
+            //}
+
+            resultParserUri = AllProg.findAllLink(xUri);
 
             //This Block find from top data, wish generate left Block, data what == ".NUM " Or  == ".VER"
-            if (resNUP_Ver > 0)
+            if (resultParserUri != null)
             {
-                resDownNup = new string[resNUP_Ver];
-                int tmpX = 0;
+                //resDownNup = new string[resNUP_Ver];
+                //int tmpX = 0;
 
-                for (int x = 0; x < tresDownNup.Length; x++)
-                {
-                    tres = (tresDownNup[x].Split('.')[tresDownNup[x].Split('.').Length - 1]).ToUpper();
-                    tres = tres.Split('/')[tres.Split('/').Length - 1].ToUpper();
+                //for (int x = 0; x < tresDownNup.Length; x++)
+                //{
+                //    tres = (tresDownNup[x].Split('.')[tresDownNup[x].Split('.').Length - 1]).ToUpper();
+                //    tres = tres.Split('/')[tres.Split('/').Length - 1].ToUpper();
 
-                    if ((tres == ("nup").ToUpper()) || (tres == ("ver").ToUpper()))
-                    {
-                        resDownNup[tmpX] = tresDownNup[x];
-                        tmpX++;
-                    }
-                }
+                //    if ((tres == ("nup").ToUpper()) || (tres == ("ver").ToUpper()))
+                //    {
+                //        resDownNup[tmpX] = tresDownNup[x];
+                //        tmpX++;
+                //    }
+                //}
 
                 //Print for screen list downloade file signature
                 // for (int x = 0; x < resDownNup.Length; x++)
@@ -129,8 +127,9 @@ namespace NodDownloadConsoleApp
                 //    Console.WriteLine((x+1).ToString() + "\t" + resDownNup[x]);
                 //}
 
-                if (xWriteConsoleText == "yes"){
-                    Console.WriteLine($"Сформировано список из {tmpX} файлов...");
+                if (xWriteConsoleText == "yes")
+                {
+                    Console.WriteLine($"Сформировано список из {resultParserUri.Length.ToString()} файлов...");
                 }
 
                 //--------------------------------------------------------------------------------------------
@@ -184,12 +183,12 @@ namespace NodDownloadConsoleApp
                 bool IsFileDownloads = true;
                 bool IsAllFilesDownloads = true;
                 //Downloade fales from list file signature
-                for (int x = 0; x < resDownNup.Length; x++)
+                for (int x = 0; x < resultParserUri.Length; x++)
                 {
                     IsFileDownloads = true;
                     try
                     {
-                        wc.DownloadFileTaskAsync(new Uri(resDownNup[x]), System.IO.Path.Combine(xPatch, System.IO.Path.GetFileName(resDownNup[x]))).Wait();
+                        wc.DownloadFileTaskAsync(new Uri(resultParserUri[x]), System.IO.Path.Combine(xPatch, System.IO.Path.GetFileName(resultParserUri[x]))).Wait();
                     }
                     catch (Exception)
                     {
@@ -199,11 +198,11 @@ namespace NodDownloadConsoleApp
 
                     if (xWriteConsoleText == "yes")
                     {
-                        if (IsFileDownloads == true) { Console.WriteLine($"{x + 1}. \t Files Name {resDownNup[x]} is download... \t {new System.IO.FileInfo(System.IO.Path.Combine(xPatch, System.IO.Path.GetFileName(resDownNup[x]))).Length}"); }
+                        if (IsFileDownloads == true) { Console.WriteLine($"{x + 1}. \t Files Name {resultParserUri[x]} is download... \t {new System.IO.FileInfo(System.IO.Path.Combine(xPatch, System.IO.Path.GetFileName(resultParserUri[x]))).Length}"); }
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine($"{x + 1}. \t Files Name {resDownNup[x]} is not downloads...");
+                            Console.WriteLine($"{x + 1}. \t Files Name {resultParserUri[x]} is not downloads...");
                             Console.ResetColor();
                         }
                     }
@@ -218,6 +217,7 @@ namespace NodDownloadConsoleApp
                     //Insert Code from copy dataBase *.nup in file share.
                 }
             }
+            else { Console.WriteLine("Not found file *.ver and *.nup "); }
 
         }
 

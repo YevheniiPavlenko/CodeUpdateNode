@@ -11,3 +11,4 @@ C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodDownloadConsoleApp\obj\Deb
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodDownloadConsoleApp\obj\Debug\NodDownloadConsoleApp.exe
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodDownloadConsoleApp\obj\Debug\NodDownloadConsoleApp.pdb
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodDownloadConsoleApp\bin\Debug\Config.xml
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodDownloadConsoleApp\obj\Debug\NodDownloadConsoleApp.csproj.CoreCompileInputs.cache

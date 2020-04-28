@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
 using System.Net;
+using HtmlAgilityPack;
 
 namespace NodDownloadConsoleApp
 {
@@ -126,5 +127,58 @@ namespace NodDownloadConsoleApp
             }
         }
 
+        static public string[] findAllLink(Uri x_uri)
+        {
+            WebClient wc;
+            string[] tresDownNup;
+            string[] resDownNup;
+            int resCount = 0;
+            int resNUP_Ver = 0;
+            int resVer_Count = 0;
+            string tres;
+
+            wc = new WebClient();
+            HtmlDocument xDoc = new HtmlDocument();
+            xDoc.Load(wc.OpenRead(x_uri));
+            tresDownNup = new string[xDoc.DocumentNode.SelectNodes("//a[@href]").Count];
+
+            //This Block find All tag from exists links
+            foreach (HtmlNode a in xDoc.DocumentNode.SelectNodes("//a[@href]"))
+            {
+                tresDownNup[resCount] = x_uri.ToString() + a.Attributes["href"].Value;
+                resCount++;
+
+                tres = (tresDownNup[resCount - 1].Split('.')[tresDownNup[resCount - 1].Split('.').Length - 1]).ToUpper();
+                if ((tres == ("nup").ToUpper()) || (tres == ("ver").ToUpper()))
+                {
+                    resNUP_Ver++;
+                    //Console.WriteLine(tres);
+                    if (tres == ("ver").ToUpper()) { resVer_Count++; }
+                }
+            }
+
+            if ((resNUP_Ver > 0) && (resVer_Count > 0))
+            {
+                resDownNup = new string[resNUP_Ver];
+                int tmpX = 0;
+
+                for (int x = 0; x < tresDownNup.Length; x++)
+                {
+                    tres = (tresDownNup[x].Split('.')[tresDownNup[x].Split('.').Length - 1]).ToUpper();
+                    tres = tres.Split('/')[tres.Split('/').Length - 1].ToUpper();
+
+                    if ((tres == ("nup").ToUpper()) || (tres == ("ver").ToUpper()))
+                    {
+                        resDownNup[tmpX] = tresDownNup[x];
+                        tmpX++;
+                    }
+                }
+
+                return resDownNup;
+            } else
+            {
+                return null;
+            }
+        }
     }
 }
