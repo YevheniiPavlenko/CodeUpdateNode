@@ -33,3 +33,4 @@ C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\bin\Debug\NodUpdat
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\bin\Debug\NodUpdater.pdb
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.exe
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csproj.CoreCompileInputs.cache

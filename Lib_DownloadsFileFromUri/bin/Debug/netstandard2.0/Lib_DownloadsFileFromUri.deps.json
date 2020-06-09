@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "a9190991f4cb56caf7a0611e885b5252e8bca1c7"
+    "signature": ""
   },
   "compilationOptions": {},
   "targets": {
@@ -9,14 +9,14 @@
     ".NETStandard,Version=v2.0/": {
       "Lib_DownloadsFileFromUri/1.0.0": {
         "dependencies": {
-          "HtmlAgilityPack": "1.11.11",
+          "HtmlAgilityPack": "1.11.17",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
           "Lib_DownloadsFileFromUri.dll": {}
         }
       },
-      "HtmlAgilityPack/1.11.11": {
+      "HtmlAgilityPack/1.11.17": {
         "dependencies": {
           "System.Net.Http": "4.3.2",
           "System.Xml.XPath": "4.3.0",
@@ -25,8 +25,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {
-            "assemblyVersion": "1.11.11.0",
-            "fileVersion": "1.11.11.0"
+            "assemblyVersion": "1.11.17.0",
+            "fileVersion": "1.11.17.0"
           }
         }
       },
@@ -604,12 +604,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "HtmlAgilityPack/1.11.11": {
+    "HtmlAgilityPack/1.11.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tPD0imfE7oqLrEUMXpFgwzXhCVIae6QUXZH17eMeXEGyEeiSdDADk+Wgg/73NW/alk+/GY8kAx9HsCYbVRCGvA==",
-      "path": "htmlagilitypack/1.11.11",
-      "hashPath": "htmlagilitypack.1.11.11.nupkg.sha512"
+      "sha512": "sha512-/aFnzxmvcWj9D2KEH9tEHE4rv5ZOGOTmgWtZK/Wr3ZwU0NrXVwzpPM2O57Roe08N9/h7tvwMD8lqT6KlKPahBg==",
+      "path": "htmlagilitypack/1.11.17",
+      "hashPath": "htmlagilitypack.1.11.17.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
