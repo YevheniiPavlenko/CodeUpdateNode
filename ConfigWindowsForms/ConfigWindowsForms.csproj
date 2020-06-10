@@ -79,5 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigClassLib\ConfigClassLib.csproj">
+      <Project>{a237961b-bfad-4edc-a535-f8d49afb6e51}</Project>
+      <Name>ConfigClassLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigWindowsFormsControlLib\ConfigWindowsFormsControlLib.csproj">
+      <Project>{4b6b473a-ad27-4fa1-9751-cae838da6855}</Project>
+      <Name>ConfigWindowsFormsControlLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

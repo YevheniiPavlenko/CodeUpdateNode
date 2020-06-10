@@ -8,3 +8,8 @@ C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.csproj.CoreCompileInputs.cache
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.exe
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\ConfigClassLib.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\ConfigWindowsFormsControlLib.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\ConfigClassLib.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\ConfigWindowsFormsControlLib.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.csproj.CopyComplete

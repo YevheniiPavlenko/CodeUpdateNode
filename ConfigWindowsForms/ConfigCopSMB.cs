@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConfigClassLib;
 
 namespace ConfigWindowsForms
 {
@@ -15,6 +16,11 @@ namespace ConfigWindowsForms
         public ConfigCopSMB()
         {
             InitializeComponent();
+        }
+
+        private void ConfigCopSMB_Load(object sender, EventArgs e)
+        {
+            ConfigSMB.CreateConfigSMBXML();
         }
     }
 }

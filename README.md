@@ -1,6 +1,20 @@
 "# Software product for creating backups / Програмный продукт для создания бекапов" 
 
 ------------------------------------
+June 10, 2020, 8:02 p.m.
+
+Added to the ConfigSMB class procedures for creating a configuration (CreateConfigSMBXML) and for editing a configuration file (AddJobsForConfigSMBXML).
+At the moment, changes are being added to the function of changing attributes, that is, in the appendix.
+---
+10 Июнь 2020, 20:02 часов вечера
+
+Добавлено в клас ConfigSMB процедуры для создания конфигурации (CreateConfigSMBXML) и для редактирования конфигурационного файла (AddJobsForConfigSMBXML).
+На данный момент добавляются изменения в функции изменения атрибутов, то есть в добавлении.
+------------------------------------
+June 10, 2020, 9:58 a.m.
+
+Save....
+------------------------------------
 June 9, 2020, 8:24 p.m.
 
 Save....

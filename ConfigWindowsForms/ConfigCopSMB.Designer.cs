@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // ConfigCopSMB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 275);
-            this.Name = "Form1";
+            this.Name = "ConfigCopSMB";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.ConfigCopSMB_Load);
             this.ResumeLayout(false);
 
         }
