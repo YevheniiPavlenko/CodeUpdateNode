@@ -1,6 +1,33 @@
 "# Software product for creating backups / Програмный продукт для создания бекапов" 
 
 ------------------------------------
+June 10, 2020, 11:07 p.m.
+
+Added and completed procedures for working with SMB configuration
+
+public static void CreateConfigSMBXML ()
+public static void AddJobsForConfigSMBXML (string CdirPatchInput, string CdirPatchOutput, bool ISExDir = false)
+public static void RemoveJobsForConfigSMBXML (int IdJObsForConfig, bool IsRepackConfig = true)
+public static void RemoveListJobsForConfigSMBXML (List <int> IdJobsForConfig, bool IsRepackConfig = true)
+public static void RemoveAllJobsForConfigSMBXML ()
+private static void RepackJobsForConfigSMBXML ()
+
+Plan to move on to writing a user interface.
+---
+10 Июнь 2020, 23:07 часов ночи.
+
+Добавлены и доделаны процедуры для работы с конфигурацией SMB
+
+public static void CreateConfigSMBXML()
+public static void AddJobsForConfigSMBXML(string CdirPatchInput, string CdirPatchOutput, bool ISExDir = false)
+public static void RemoveJobsForConfigSMBXML(int IdJObsForConfig, bool IsRepackConfig = true)
+public static void RemoveListJobsForConfigSMBXML(List<int> IdJobsForConfig, bool IsRepackConfig = true)
+public static void RemoveAllJobsForConfigSMBXML()
+private static void RepackJobsForConfigSMBXML()
+
+Планируеться перейти к написанию пользовательского интерфейса.
+
+------------------------------------
 June 10, 2020, 8:02 p.m.
 
 Added to the ConfigSMB class procedures for creating a configuration (CreateConfigSMBXML) and for editing a configuration file (AddJobsForConfigSMBXML).
