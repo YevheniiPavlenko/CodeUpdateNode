@@ -10,6 +10,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.XPath;
+using ConfigWindowsFormsControlLib;
 
 namespace ConfigClassLib
 {
@@ -229,6 +230,42 @@ namespace ConfigClassLib
             }
 
             xRepackDocument.Save(NameFileSMBConfigDefault);
+        }
+
+        /// <summary>
+        /// Функция возвращает параметры по заднию, для каждого Id
+        /// </summary>
+        /// <param name="tNumJobsForConfig">Номер задания Id</param>
+        /// <returns></returns>
+        public static ProprtyXElementJob getIngo_XElementJobForList(int tIdJobsForConfig)
+        {
+            ProprtyXElementJob xProprtyXElementJob = new ProprtyXElementJob(-1, "", "");
+
+            if (!File.Exists(NameFileSMBConfigDefault))
+            {
+                return xProprtyXElementJob;
+            }
+
+            XDocument xReadDocument = new XDocument();
+            try { xReadDocument = XDocument.Load(NameFileSMBConfigDefault); }
+            catch
+            {
+                //При возникновении исключения загрузки xml, просто завершиться процедура. Такие исключения могут быть вызваны
+                //тем, кто-то мог немного отредактировать сам конфигурационый файл и наруть его.
+                return xProprtyXElementJob;
+            }
+
+            XElement xElementSMBConfig = xReadDocument.Element("ConfigSMB");
+            //Если на найдено выше указаного элемента, то происходит завершение процедуры.
+            if (xElementSMBConfig == null) { return xProprtyXElementJob; }
+
+            IEnumerable<XElement> xListXElements_JobsSMB = xElementSMBConfig.XPathSelectElements("JobsSMB").Where(x => x.Attribute("Id").Value.Equals(tIdJobsForConfig.ToString()));
+            if (xListXElements_JobsSMB == null) { return xProprtyXElementJob; }
+
+            XElement xElement = xListXElements_JobsSMB.First();
+            xProprtyXElementJob.Set(Convert.ToInt32(xElement.Attribute("Id").Value), xElement.Attribute("dirPatchInput").Value, xElement.Attribute("dirPatchOutput").Value);
+
+            return xProprtyXElementJob;
         }
     }
 }

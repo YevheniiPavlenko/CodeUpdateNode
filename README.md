@@ -1,6 +1,22 @@
 "# Software product for creating backups / Програмный продукт для создания бекапов" 
 
 ------------------------------------
+June 11, 2020, 22:39 p.m.
+
+Added user interface XElementJobForList, created in it functions and methods for communicating with other parts of the software product.
+Added to the ConfigSMB class of the ConfigClassLib assembly, a function that will return the desired job item to the user interface.
+Planning for the future, that is, tomorrow to draw a list of tasks. That is, in a separate user interface.
+And it is planned to switch to writing an engine that will handle the actual tasks. Rather, for the batch of the first release, only the part will be organized that will only perform tasks during the Russian launch. And most likely the service that will perform the task in the background will not hang.
+
+---
+11 Июнь 2020, 22:39 часов вечера.
+
+Добавлено пользовательский интерфейс XElementJobForList, создано в нем фукнкции и методы для связи с другими частами програмного продукта.
+Добавлено в клас  ConfigSMB сборки ConfigClassLib, функцию которая вернет нужный элемент задания в пользовательський интерфейс.
+Планируеться в будущем, то есть уже завтра сделать вывод списка заданий. То есть в отдельном пользовательськом интерфейсе.
+И планируеться перейти на написание движка который будет обрабатывать собственно задания. Скорее к выпеску первого релиза будет только организована часть которая только будет выполнять задания при русном запуске. И скорее всего не будет висеть служба которая выдет выполнять в фоне задание.
+
+------------------------------------
 June 10, 2020, 11:07 p.m.
 
 Added and completed procedures for working with SMB configuration

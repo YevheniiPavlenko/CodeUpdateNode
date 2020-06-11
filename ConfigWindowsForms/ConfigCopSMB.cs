@@ -36,10 +36,10 @@ namespace ConfigWindowsForms
 
             //ConfigSMB.RemoveJobsForConfigSMBXML(0);
 
-            ConfigSMB.RemoveAllJobsForConfigSMBXML();
+            //ConfigSMB.RemoveAllJobsForConfigSMBXML();
             //ConfigSMB.AddJobsForConfigSMBXML(@"C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater", @"C:\Users\Yevgenii.Pavlenko\source\repoiks", true);
 
-
+            xElementJobForList1.SetValue(ConfigSMB.getIngo_XElementJobForList(2));
         }
     }
 }

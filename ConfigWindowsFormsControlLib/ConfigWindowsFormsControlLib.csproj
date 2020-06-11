@@ -42,18 +42,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="MainListJobs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="MainListJobs.Designer.cs">
+      <DependentUpon>MainListJobs.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XElementJobForList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XElementJobForList.Designer.cs">
+      <DependentUpon>XElementJobForList.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="MainListJobs.resx">
+      <DependentUpon>MainListJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XElementJobForList.resx">
+      <DependentUpon>XElementJobForList.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

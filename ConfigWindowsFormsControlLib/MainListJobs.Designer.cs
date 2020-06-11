@@ -1,13 +1,13 @@
 ﻿namespace ConfigWindowsFormsControlLib
 {
-    partial class UserControl1
+    partial class MainListJobs
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -22,7 +22,7 @@
 
         #region Component Designer generated code
 
-        /// <summary>
+        /// <summary> 
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // UserControl1
+            // MainListJobs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(534, 162);
+            this.Name = "MainListJobs";
+            this.Size = new System.Drawing.Size(603, 345);
             this.ResumeLayout(false);
 
         }

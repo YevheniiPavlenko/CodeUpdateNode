@@ -1,4 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Block for copying jobs-->
 <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<ConfigSMB />
+<ConfigSMB>
+  <JobsSMB Id="0" dirPatchInput="C:\Users\Yevgenii.Pavlenko\source" dirPatchOutput="C:\Users" />
+  <JobsSMB Id="1" dirPatchInput="C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug" dirPatchOutput="C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin" />
+  <JobsSMB Id="2" dirPatchInput="C:\Users\Yevgenii.Pavlenko\source" dirPatchOutput="C:\Users" />
+  <JobsSMB Id="3" dirPatchInput="C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater" dirPatchOutput="C:\Users\Yevgenii.Pavlenko\source\repos" />
+</ConfigSMB>

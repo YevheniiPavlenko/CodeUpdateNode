@@ -28,13 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.xElementJobForList1 = new ConfigWindowsFormsControlLib.XElementJobForList();
             this.SuspendLayout();
+            // 
+            // xElementJobForList1
+            // 
+            this.xElementJobForList1.Location = new System.Drawing.Point(12, 23);
+            this.xElementJobForList1.Name = "xElementJobForList1";
+            this.xElementJobForList1.Size = new System.Drawing.Size(600, 100);
+            this.xElementJobForList1.TabIndex = 0;
             // 
             // ConfigCopSMB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 275);
+            this.ClientSize = new System.Drawing.Size(627, 347);
+            this.Controls.Add(this.xElementJobForList1);
             this.Name = "ConfigCopSMB";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ConfigCopSMB_Load);
@@ -43,6 +52,8 @@
         }
 
         #endregion
+
+        private ConfigWindowsFormsControlLib.XElementJobForList xElementJobForList1;
     }
 }
 

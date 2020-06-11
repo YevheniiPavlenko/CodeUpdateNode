@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ConfigWindowsFormsControlLib
 {
-    public partial class UserControl1: UserControl
+    public partial class MainListJobs : UserControl
     {
-        public UserControl1()
+        public MainListJobs()
         {
             InitializeComponent();
         }

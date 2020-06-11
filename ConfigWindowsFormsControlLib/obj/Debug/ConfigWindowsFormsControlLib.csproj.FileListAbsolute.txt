@@ -1,8 +1,9 @@
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\bin\Debug\ConfigWindowsFormsControlLib.dll
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\bin\Debug\ConfigWindowsFormsControlLib.pdb
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.csprojAssemblyReference.cache
-C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.UserControl1.resources
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.csproj.GenerateResource.cache
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.csproj.CoreCompileInputs.cache
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.dll
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.MainListJobs.resources
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.XElementJobForList.resources

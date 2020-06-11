@@ -44,5 +44,11 @@
     <Compile Include="ConfigSMB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigWindowsFormsControlLib\ConfigWindowsFormsControlLib.csproj">
+      <Project>{4b6b473a-ad27-4fa1-9751-cae838da6855}</Project>
+      <Name>ConfigWindowsFormsControlLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
