@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.xElementJobForList1 = new ConfigWindowsFormsControlLib.XElementJobForList();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigCopSMB));
+            this.mainListJobs1 = new ConfigWindowsFormsControlLib.MainListJobs();
             this.SuspendLayout();
             // 
-            // xElementJobForList1
+            // mainListJobs1
             // 
-            this.xElementJobForList1.Location = new System.Drawing.Point(12, 23);
-            this.xElementJobForList1.Name = "xElementJobForList1";
-            this.xElementJobForList1.Size = new System.Drawing.Size(600, 100);
-            this.xElementJobForList1.TabIndex = 0;
+            this.mainListJobs1.AutoScroll = true;
+            this.mainListJobs1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainListJobs1.Location = new System.Drawing.Point(0, 0);
+            this.mainListJobs1.Name = "mainListJobs1";
+            this.mainListJobs1.Size = new System.Drawing.Size(627, 347);
+            this.mainListJobs1.TabIndex = 0;
             // 
             // ConfigCopSMB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 347);
-            this.Controls.Add(this.xElementJobForList1);
+            this.Controls.Add(this.mainListJobs1);
             this.Name = "ConfigCopSMB";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.ConfigCopSMB_Load);
@@ -53,7 +56,7 @@
 
         #endregion
 
-        private ConfigWindowsFormsControlLib.XElementJobForList xElementJobForList1;
+        private ConfigWindowsFormsControlLib.MainListJobs mainListJobs1;
     }
 }
 

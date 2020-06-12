@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -236,10 +237,11 @@ namespace ConfigClassLib
         /// Функция возвращает параметры по заднию, для каждого Id
         /// </summary>
         /// <param name="tNumJobsForConfig">Номер задания Id</param>
-        /// <returns></returns>
-        public static ProprtyXElementJob getIngo_XElementJobForList(int tIdJobsForConfig)
+        /// <returns>Вернет задания Id в виде ProprtyXElementJob</returns>
+        public static PropertyXElementJob getInfo_XElementJobForList(int tIdJobsForConfig)
         {
-            ProprtyXElementJob xProprtyXElementJob = new ProprtyXElementJob(-1, "", "");
+            //PropertyXElementJob xProprtyXElementJob = new PropertyXElementJob(-1, "", "");
+            PropertyXElementJob xProprtyXElementJob = new PropertyXElementJob();
 
             if (!File.Exists(NameFileSMBConfigDefault))
             {
@@ -266,6 +268,52 @@ namespace ConfigClassLib
             xProprtyXElementJob.Set(Convert.ToInt32(xElement.Attribute("Id").Value), xElement.Attribute("dirPatchInput").Value, xElement.Attribute("dirPatchOutput").Value);
 
             return xProprtyXElementJob;
+        }
+
+        /// <summary>
+        /// Функция возвращает параметры по всем заданиям
+        /// </summary>
+        /// <returns>Вернет список всех заданий в виде List<ProprtyXElementJob></returns>
+        public static List<PropertyXElementJob> getInfo_XElemetJobForListAll()
+        {
+            List<PropertyXElementJob> xProprtyXElementJobAll;
+
+            if (!File.Exists(NameFileSMBConfigDefault))
+            {
+                return null;
+            }
+
+            XDocument xReadDocument = new XDocument();
+            try { xReadDocument = XDocument.Load(NameFileSMBConfigDefault); }
+            catch
+            {
+                //При возникновении исключения загрузки xml, просто завершиться процедура. Такие исключения могут быть вызваны
+                //тем, кто-то мог немного отредактировать сам конфигурационый файл и наруть его.
+                return null;
+            }
+
+            XElement xElementSMBConfig = xReadDocument.Element("ConfigSMB");
+            //Если на найдено выше указаного элемента, то происходит завершение процедуры.
+            if (xElementSMBConfig == null) { return null; }
+
+            IEnumerable<XElement> xListXElements_JobsSMB = xElementSMBConfig.XPathSelectElements("JobsSMB");
+            if (xListXElements_JobsSMB == null) { return null; }
+
+            //XElement xElement = xListXElements_JobsSMB.First();
+            //xProprtyXElementJobAll.Set(Convert.ToInt32(xElement.Attribute("Id").Value), xElement.Attribute("dirPatchInput").Value, xElement.Attribute("dirPatchOutput").Value);
+
+            xProprtyXElementJobAll = new List<PropertyXElementJob>();
+
+            PropertyXElementJob propertyXElementJobTemplate;
+            foreach (XElement xElementTemplate in xListXElements_JobsSMB)
+            {
+                propertyXElementJobTemplate = new PropertyXElementJob();
+                propertyXElementJobTemplate.Set(Convert.ToInt32(xElementTemplate.Attribute("Id").Value),
+                    xElementTemplate.Attribute("dirPatchInput").Value, xElementTemplate.Attribute("dirPatchOutput").Value);
+                xProprtyXElementJobAll.Add(propertyXElementJobTemplate);
+            }
+
+            return xProprtyXElementJobAll;
         }
     }
 }

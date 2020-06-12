@@ -2,24 +2,44 @@
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Forms.ComponentModel.Com2Interop;
+using System.Xml.Linq;
 
 namespace ConfigWindowsFormsControlLib
 {
     /// <summary>
     /// Структра которая нужна только для структуры Info_XElementJobForList
     /// </summary>
-    public struct ProprtyXElementJob
+    public struct PropertyXElementJob
     {
-        public int Id;
+        private int Id;
         public string DirInput;
         public string DirOutput;
 
-        public ProprtyXElementJob(int xId, string xDirInput, string xDirOutput)
-        {
-            Id = xId; DirInput = xDirInput; DirOutput = xDirOutput;
-        }
+        //public ProprtyXElementJob(int xId, string xDirInput, string xDirOutput)
+        //{
+        //    Id = xId; DirInput = xDirInput; DirOutput = xDirOutput;
+        //}
+        //public PropertyXElementJob(){ }
+        //    Id = -1; DirInput = ""; DirOutput = "";
+        //}
 
         public void Set(int xId, string xDirInput, string xDirOutput) { Id = xId; DirInput = xDirInput; DirOutput = xDirOutput;}
+
+        public int _Id { 
+            get { return Id; }
+            set { Id = value;  } 
+        }
+
+        public string _DirInput {
+            get { return DirInput; }
+            set { DirInput = value; }
+        }
+
+        public string _DirOutput {
+            get { return DirOutput; }
+            set { DirOutput = value; }
+        }
     }
 
     /// <summary>
@@ -69,14 +89,14 @@ namespace ConfigWindowsFormsControlLib
         /// Получение иль назначение свойства всех свойств, через структуру Info_XElementJobForList, 
         /// где есть доступные свойства Id, DirInput, DirOutput
         /// </summary>
-        public ProprtyXElementJob ListProperty
+        public PropertyXElementJob ListProperty
         {
             get {
-                ProprtyXElementJob txPropertyXElement;
-                txPropertyXElement.Id = cxId; txPropertyXElement.DirInput = cxDirInput; txPropertyXElement.DirOutput = cxDirOutput;
+                PropertyXElementJob txPropertyXElement = new PropertyXElementJob();
+                txPropertyXElement._Id = cxId; txPropertyXElement._DirInput = cxDirInput; txPropertyXElement._DirOutput = cxDirOutput;
                 return txPropertyXElement;
             }
-            set { cxId = ListProperty.Id; cxDirInput = ListProperty.DirInput; cxDirOutput = ListProperty.DirOutput; }
+            set { cxId = ListProperty._Id; cxDirInput = ListProperty._DirInput; cxDirOutput = ListProperty._DirOutput; }
         }
 
         #endregion
@@ -214,11 +234,18 @@ namespace ConfigWindowsFormsControlLib
 
         }
 
-        public void SetValue (ProprtyXElementJob xElemrntJob)
+        public void SetValue (PropertyXElementJob xElemrntJob)
         {
-            label_Id.Text = xElemrntJob.Id.ToString();
-            textBox_Value_DirInput.Text = xElemrntJob.DirInput;
-            textBox_Value_DirOutput.Text = xElemrntJob.DirOutput;
+            label_Id.Text = xElemrntJob._Id.ToString();
+            textBox_Value_DirInput.Text = xElemrntJob._DirInput;
+            textBox_Value_DirOutput.Text = xElemrntJob._DirOutput;
+        }
+
+        public void SetValue (XElement xElementJob)
+        {
+            label_Id.Text = xElementJob.Attribute("Id").Value;
+            textBox_Value_DirInput.Text = xElementJob.Attribute("dirPatchInput").Value;
+            textBox_Value_DirOutput.Text = xElementJob.Attribute("dirPatchOutput").Value;
         }
 
         #endregion

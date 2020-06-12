@@ -34,8 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Name = "MainListJobs";
-            this.Size = new System.Drawing.Size(603, 345);
+            this.Size = new System.Drawing.Size(600, 600);
+            this.Load += new System.EventHandler(this.MainListJobs_Load);
             this.ResumeLayout(false);
 
         }

@@ -39,7 +39,11 @@ namespace ConfigWindowsForms
             //ConfigSMB.RemoveAllJobsForConfigSMBXML();
             //ConfigSMB.AddJobsForConfigSMBXML(@"C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater", @"C:\Users\Yevgenii.Pavlenko\source\repoiks", true);
 
-            xElementJobForList1.SetValue(ConfigSMB.getIngo_XElementJobForList(2));
+            //xElementJobForList1.SetValue(ConfigSMB.getInfo_XElementJobForList(2));
+
+            int xCount = ConfigSMB.getInfo_XElemetJobForListAll().Count();
+            mainListJobs1.Items = ConfigSMB.getInfo_XElemetJobForListAll();
+            int xItemCount = mainListJobs1.Items.Count();
         }
     }
 }
