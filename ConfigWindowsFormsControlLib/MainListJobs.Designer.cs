@@ -37,7 +37,6 @@
             this.AutoScroll = true;
             this.Name = "MainListJobs";
             this.Size = new System.Drawing.Size(600, 600);
-            this.Load += new System.EventHandler(this.MainListJobs_Load);
             this.ResumeLayout(false);
 
         }

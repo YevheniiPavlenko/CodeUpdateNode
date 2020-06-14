@@ -1,6 +1,20 @@
 "# Software product for creating backups / Програмный продукт для создания бекапов" 
 
 ------------------------------------
+June 12, 2020, 21:13 p.m.
+
+The conclusion is all the list of tasks. That is, in a separate user interface.
+
+And it is planned to switch to writing an engine that will handle the actual tasks. Rather, for the batch of the first release, only the part will be organized that will only perform tasks during the Russian launch. And most likely the service that will perform the task in the background will not hang.
+
+---
+12 Июнь 2020, 21:13 часов вечера.
+
+Сделан вывод все списка заданий. То есть в отдельном пользовательськом интерфейсе.
+
+И планируеться перейти на написание движка который будет обрабатывать собственно задания. Скорее к выпеску первого релиза будет только организована часть которая только будет выполнять задания при русном запуске. И скорее всего не будет висеть служба которая выдет выполнять в фоне задание.
+
+------------------------------------
 June 11, 2020, 22:39 p.m.
 
 Added user interface XElementJobForList, created in it functions and methods for communicating with other parts of the software product.

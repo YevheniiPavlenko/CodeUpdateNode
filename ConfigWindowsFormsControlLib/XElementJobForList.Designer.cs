@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.CodeDom;
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Windows.Forms;
@@ -10,21 +12,53 @@ namespace ConfigWindowsFormsControlLib
     /// <summary>
     /// Структра которая нужна только для структуры Info_XElementJobForList
     /// </summary>
+    [System.Serializable]
     public struct PropertyXElementJob
     {
         private int Id;
-        public string DirInput;
-        public string DirOutput;
-
-        //public ProprtyXElementJob(int xId, string xDirInput, string xDirOutput)
-        //{
-        //    Id = xId; DirInput = xDirInput; DirOutput = xDirOutput;
-        //}
-        //public PropertyXElementJob(){ }
-        //    Id = -1; DirInput = ""; DirOutput = "";
-        //}
+        private string DirInput;
+        private string DirOutput;
 
         public void Set(int xId, string xDirInput, string xDirOutput) { Id = xId; DirInput = xDirInput; DirOutput = xDirOutput;}
+
+        public static bool operator !=(PropertyXElementJob Own, PropertyXElementJob Old)
+        {
+            bool Rezult = false;
+
+            if (Own._Id != Old._Id || Own._DirInput != Old._DirInput || Own._DirOutput != Old._DirOutput) { Rezult = true; }
+
+            return Rezult;
+        }
+
+        public static bool Equals(PropertyXElementJob Own, PropertyXElementJob Old)
+        {
+            return Own._Id == Old._Id && Own._DirInput == Old._DirInput && Own._DirOutput == Old._DirOutput;
+        }
+
+        public static int GetHashCode(PropertyXElementJob Old)
+        {
+            return (Old._Id, Old._DirInput, Old._DirOutput).GetHashCode();
+        }
+
+        public static bool operator ==(PropertyXElementJob Own, PropertyXElementJob Old)
+        {
+            bool Rezult = false;
+            
+            if(Own._Id == Old._Id && Own._DirInput == Old._DirInput && Own._DirOutput == Old._DirOutput) { Rezult = true; }
+
+            return Rezult;
+        }
+
+        public PropertyXElementJob Value()
+        {
+            PropertyXElementJob propertyXElementJobTemp = new PropertyXElementJob();
+
+            propertyXElementJobTemp._Id = Id;
+            propertyXElementJobTemp._DirInput = DirInput;
+            propertyXElementJobTemp._DirOutput = DirOutput;
+
+            return propertyXElementJobTemp;
+        }
 
         public int _Id { 
             get { return Id; }
@@ -43,7 +77,7 @@ namespace ConfigWindowsFormsControlLib
     }
 
     /// <summary>
-    /// Структура даных для пользовательского компонента XElementJobForList
+    /// Структура даных для пользовательского компонента XElementJobForList нужно убрать.
     /// </summary>
     public struct Info_XElementJobForList
     {
@@ -105,6 +139,7 @@ namespace ConfigWindowsFormsControlLib
 
     partial class XElementJobForList
     {
+        private PropertyXElementJob cxPropertyXElementJob = new PropertyXElementJob();
         /// <summary> 
         /// Required designer variable.
         /// </summary>
@@ -133,28 +168,28 @@ namespace ConfigWindowsFormsControlLib
         {
             this.tableLayoutPanelXElementJobs = new System.Windows.Forms.TableLayoutPanel();
             this.textBox_Value_DirOutput = new System.Windows.Forms.TextBox();
-            this.label_Id = new System.Windows.Forms.Label();
             this.label_Text_DirInput = new System.Windows.Forms.Label();
             this.label_Text_DirOutput = new System.Windows.Forms.Label();
             this.textBox_Value_DirInput = new System.Windows.Forms.TextBox();
+            this.buttonDirInput = new System.Windows.Forms.Button();
+            this.buttonDirOutput = new System.Windows.Forms.Button();
             this.tableLayoutPanelXElementJobs.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanelXElementJobs
             // 
-            this.tableLayoutPanelXElementJobs.ColumnCount = 7;
+            this.tableLayoutPanelXElementJobs.ColumnCount = 5;
             this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanelXElementJobs.Controls.Add(this.textBox_Value_DirOutput, 5, 3);
-            this.tableLayoutPanelXElementJobs.Controls.Add(this.label_Id, 1, 1);
-            this.tableLayoutPanelXElementJobs.Controls.Add(this.label_Text_DirInput, 3, 1);
-            this.tableLayoutPanelXElementJobs.Controls.Add(this.label_Text_DirOutput, 3, 3);
-            this.tableLayoutPanelXElementJobs.Controls.Add(this.textBox_Value_DirInput, 5, 1);
+            this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanelXElementJobs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanelXElementJobs.Controls.Add(this.textBox_Value_DirOutput, 3, 3);
+            this.tableLayoutPanelXElementJobs.Controls.Add(this.label_Text_DirInput, 1, 1);
+            this.tableLayoutPanelXElementJobs.Controls.Add(this.label_Text_DirOutput, 1, 3);
+            this.tableLayoutPanelXElementJobs.Controls.Add(this.textBox_Value_DirInput, 3, 1);
+            this.tableLayoutPanelXElementJobs.Controls.Add(this.buttonDirInput, 4, 1);
+            this.tableLayoutPanelXElementJobs.Controls.Add(this.buttonDirOutput, 4, 3);
             this.tableLayoutPanelXElementJobs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanelXElementJobs.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanelXElementJobs.Location = new System.Drawing.Point(0, 0);
@@ -165,38 +200,26 @@ namespace ConfigWindowsFormsControlLib
             this.tableLayoutPanelXElementJobs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanelXElementJobs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanelXElementJobs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanelXElementJobs.Size = new System.Drawing.Size(600, 100);
+            this.tableLayoutPanelXElementJobs.Size = new System.Drawing.Size(602, 102);
             this.tableLayoutPanelXElementJobs.TabIndex = 0;
             // 
             // textBox_Value_DirOutput
             // 
             this.textBox_Value_DirOutput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_Value_DirOutput.Location = new System.Drawing.Point(219, 58);
+            this.textBox_Value_DirOutput.Location = new System.Drawing.Point(188, 59);
             this.textBox_Value_DirOutput.Multiline = true;
             this.textBox_Value_DirOutput.Name = "textBox_Value_DirOutput";
-            this.textBox_Value_DirOutput.Size = new System.Drawing.Size(366, 29);
+            this.textBox_Value_DirOutput.Size = new System.Drawing.Size(379, 30);
             this.textBox_Value_DirOutput.TabIndex = 4;
-            // 
-            // label_Id
-            // 
-            this.label_Id.AutoSize = true;
-            this.label_Id.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label_Id.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_Id.Location = new System.Drawing.Point(13, 10);
-            this.label_Id.Name = "label_Id";
-            this.label_Id.Size = new System.Drawing.Size(25, 35);
-            this.label_Id.TabIndex = 0;
-            this.label_Id.Text = "{label_Id}";
-            this.label_Id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_Text_DirInput
             // 
             this.label_Text_DirInput.AutoSize = true;
             this.label_Text_DirInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_Text_DirInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_Text_DirInput.Location = new System.Drawing.Point(54, 10);
+            this.label_Text_DirInput.Location = new System.Drawing.Point(13, 10);
             this.label_Text_DirInput.Name = "label_Text_DirInput";
-            this.label_Text_DirInput.Size = new System.Drawing.Size(149, 35);
+            this.label_Text_DirInput.Size = new System.Drawing.Size(159, 36);
             this.label_Text_DirInput.TabIndex = 1;
             this.label_Text_DirInput.Text = "Наименование исходящей директории";
             this.label_Text_DirInput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,9 +228,9 @@ namespace ConfigWindowsFormsControlLib
             // 
             this.label_Text_DirOutput.AutoSize = true;
             this.label_Text_DirOutput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_Text_DirOutput.Location = new System.Drawing.Point(54, 55);
+            this.label_Text_DirOutput.Location = new System.Drawing.Point(13, 56);
             this.label_Text_DirOutput.Name = "label_Text_DirOutput";
-            this.label_Text_DirOutput.Size = new System.Drawing.Size(149, 35);
+            this.label_Text_DirOutput.Size = new System.Drawing.Size(159, 36);
             this.label_Text_DirOutput.TabIndex = 2;
             this.label_Text_DirOutput.Text = "Наименование директории назначяения\r\n";
             this.label_Text_DirOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,11 +238,33 @@ namespace ConfigWindowsFormsControlLib
             // textBox_Value_DirInput
             // 
             this.textBox_Value_DirInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_Value_DirInput.Location = new System.Drawing.Point(219, 13);
+            this.textBox_Value_DirInput.Location = new System.Drawing.Point(188, 13);
             this.textBox_Value_DirInput.Multiline = true;
             this.textBox_Value_DirInput.Name = "textBox_Value_DirInput";
-            this.textBox_Value_DirInput.Size = new System.Drawing.Size(366, 29);
+            this.textBox_Value_DirInput.Size = new System.Drawing.Size(379, 30);
             this.textBox_Value_DirInput.TabIndex = 3;
+            // 
+            // buttonDirInput
+            // 
+            this.buttonDirInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDirInput.Location = new System.Drawing.Point(573, 13);
+            this.buttonDirInput.Name = "buttonDirInput";
+            this.buttonDirInput.Size = new System.Drawing.Size(26, 30);
+            this.buttonDirInput.TabIndex = 5;
+            this.buttonDirInput.Text = "...";
+            this.buttonDirInput.UseVisualStyleBackColor = true;
+            this.buttonDirInput.Click += new System.EventHandler(this.buttonDir_Click);
+            // 
+            // buttonDirOutput
+            // 
+            this.buttonDirOutput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDirOutput.Location = new System.Drawing.Point(573, 59);
+            this.buttonDirOutput.Name = "buttonDirOutput";
+            this.buttonDirOutput.Size = new System.Drawing.Size(26, 30);
+            this.buttonDirOutput.TabIndex = 6;
+            this.buttonDirOutput.Text = "...";
+            this.buttonDirOutput.UseVisualStyleBackColor = true;
+            this.buttonDirOutput.Click += new System.EventHandler(this.buttonDir_Click);
             // 
             // XElementJobForList
             // 
@@ -227,7 +272,7 @@ namespace ConfigWindowsFormsControlLib
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanelXElementJobs);
             this.Name = "XElementJobForList";
-            this.Size = new System.Drawing.Size(600, 100);
+            this.Size = new System.Drawing.Size(602, 102);
             this.tableLayoutPanelXElementJobs.ResumeLayout(false);
             this.tableLayoutPanelXElementJobs.PerformLayout();
             this.ResumeLayout(false);
@@ -236,25 +281,32 @@ namespace ConfigWindowsFormsControlLib
 
         public void SetValue (PropertyXElementJob xElemrntJob)
         {
-            label_Id.Text = xElemrntJob._Id.ToString();
+            cxPropertyXElementJob.Set(xElemrntJob._Id, xElemrntJob._DirInput, xElemrntJob._DirOutput);
             textBox_Value_DirInput.Text = xElemrntJob._DirInput;
             textBox_Value_DirOutput.Text = xElemrntJob._DirOutput;
         }
 
+        private Button buttonDirInput;
+        private Button buttonDirOutput;
+
+        public PropertyXElementJob Value { 
+            get { return cxPropertyXElementJob; }
+            set { cxPropertyXElementJob = value; }
+        }
+
+        private TableLayoutPanel tableLayoutPanelXElementJobs;
+        private TextBox textBox_Value_DirOutput;
+        private Label label_Text_DirInput;
+        private Label label_Text_DirOutput;
+        private TextBox textBox_Value_DirInput;
+
         public void SetValue (XElement xElementJob)
         {
-            label_Id.Text = xElementJob.Attribute("Id").Value;
+            cxPropertyXElementJob.Set(Convert.ToInt32(xElementJob.Attribute("Id").Value), xElementJob.Attribute("dirPatchInput").Value, xElementJob.Attribute("dirPatchOutput").Value);
             textBox_Value_DirInput.Text = xElementJob.Attribute("dirPatchInput").Value;
             textBox_Value_DirOutput.Text = xElementJob.Attribute("dirPatchOutput").Value;
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelXElementJobs;
-        private System.Windows.Forms.Label label_Id;
-        private System.Windows.Forms.Label label_Text_DirInput;
-        private System.Windows.Forms.Label label_Text_DirOutput;
-        private System.Windows.Forms.TextBox textBox_Value_DirOutput;
-        private System.Windows.Forms.TextBox textBox_Value_DirInput;
     }
 }

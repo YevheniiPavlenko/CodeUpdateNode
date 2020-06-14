@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConfigClassLib;
+using ConfigWindowsFormsControlLib;
 
 namespace ConfigWindowsForms
 {
     public partial class ConfigCopSMB : Form
     {
+        public delegate void cRefreshConfigSMB();
         public ConfigCopSMB()
         {
             InitializeComponent();
@@ -41,9 +43,16 @@ namespace ConfigWindowsForms
 
             //xElementJobForList1.SetValue(ConfigSMB.getInfo_XElementJobForList(2));
 
-            int xCount = ConfigSMB.getInfo_XElemetJobForListAll().Count();
             mainListJobs1.Items = ConfigSMB.getInfo_XElemetJobForListAll();
-            int xItemCount = mainListJobs1.Items.Count();
+         }
+
+        public void RefreshConfigSMB(List<PropertyXElementJob> xListpropertyXElementJobsTemplate)
+        {
+            ConfigSMB.RemoveAllJobsForConfigSMBXML();
+            ConfigSMB.AddJobsForConfigSMBXML_forPropertyXElementJob(mainListJobs1.Items);
+            mainListJobs1.Items = ConfigSMB.getInfo_XElemetJobForListAll();
         }
+
+
     }
 }

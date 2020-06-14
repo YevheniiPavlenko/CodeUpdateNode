@@ -96,6 +96,61 @@ namespace ConfigClassLib
         }
 
         /// <summary>
+        /// Запись значений из списка PropertyXElementJob 
+        /// </summary>
+        /// <param name="xpropertyXElementJobsTempate">Списка PropertyXElementJob</param>
+        /// <param name="ISExDir">Проверка на существование директорий обоих директорий, при указании этого парамерта значением true
+        /// будут проверяться каталоги, но а если не указать иль указать в значение false, то проверки не будет</param>
+        public static void AddJobsForConfigSMBXML_forPropertyXElementJob(List<PropertyXElementJob> xpropertyXElementJobsTempate, bool ISExDir = false)
+        {
+            if (!File.Exists(NameFileSMBConfigDefault))
+            {
+                return;
+            }
+
+            XDocument ReCreateDocument = new XDocument();
+            //Обработка исключения при загрузке конфигурационного файла.
+            try { ReCreateDocument = XDocument.Load(NameFileSMBConfigDefault); }
+            catch
+            {
+                //При возникновении исключения загрузки xml, просто завершиться процедура. Такие исключения могут быть вызваны
+                //тем, кто-то мог немного отредактировать сам конфигурационый файл и наруть его.
+                return;
+            }
+
+            XElement xElementSMBConfig = ReCreateDocument.Element("ConfigSMB");
+            //Если на найдено выше указаного элемента, то происходит завершение процедуры.
+            if (xElementSMBConfig == null) { return; }
+
+            IEnumerable<XElement> xListXElements_JobsSMB = xElementSMBConfig.XPathSelectElements("JobsSMB");
+            int cMaxValueIIN_JobsSMB = 0;
+            if (xListXElements_JobsSMB.Select(x => x.Attribute("Id").Value).Count() != 0)
+            {
+                cMaxValueIIN_JobsSMB = xListXElements_JobsSMB.Max(x => Convert.ToInt32(x.Attribute("Id").Value)) + 1;
+            }
+
+            XElement xElementPatch = new XElement("JobsSMB");
+
+            foreach (PropertyXElementJob txpropertyXElementJobTemp in xpropertyXElementJobsTempate)
+            {
+                xElementPatch.Add(new XAttribute("Id", cMaxValueIIN_JobsSMB));
+                xElementPatch.Add(new XAttribute("dirPatchInput",txpropertyXElementJobTemp._DirInput));
+                xElementPatch.Add(new XAttribute("dirPatchOutput", txpropertyXElementJobTemp._DirOutput));
+
+                if (ISExDir == true)
+                {
+                    if (Directory.Exists(txpropertyXElementJobTemp._DirInput) & Directory.Exists(txpropertyXElementJobTemp._DirOutput)) {
+                        cMaxValueIIN_JobsSMB++;
+                        xElementSMBConfig.Add(xElementPatch);
+                    }
+                }
+                
+            }
+            
+            ReCreateDocument.Save(NameFileSMBConfigDefault);
+        }
+
+        /// <summary>
         /// Удаление конкретного задания из конфигурауции
         /// </summary>
         /// <param name="IdJObsForConfig">передаеться номер задания которое нужно удалить</param>
