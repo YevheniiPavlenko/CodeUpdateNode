@@ -2,7 +2,6 @@ C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\ConfigWindowsForms.exe
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\ConfigWindowsForms.pdb
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.csprojAssemblyReference.cache
-C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.ConfigCopSMB.resources
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.Properties.Resources.resources
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.csproj.GenerateResource.cache
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.csproj.CoreCompileInputs.cache
@@ -13,3 +12,6 @@ C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\ConfigClassLib.pdb
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\ConfigWindowsFormsControlLib.pdb
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.csproj.CopyComplete
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\AllClass.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug\AllClass.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\obj\Debug\ConfigWindowsForms.WorkFoJobs.resources

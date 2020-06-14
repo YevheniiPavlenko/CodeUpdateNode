@@ -1,0 +1,5 @@
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\AllClass\bin\Debug\AllClass.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\AllClass\bin\Debug\AllClass.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\AllClass\obj\Debug\AllClass.csproj.CoreCompileInputs.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\AllClass\obj\Debug\AllClass.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\AllClass\obj\Debug\AllClass.pdb

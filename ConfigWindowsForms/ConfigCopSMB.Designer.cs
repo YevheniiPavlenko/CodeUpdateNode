@@ -37,7 +37,6 @@
             this.mainListJobs1.AutoScroll = true;
             this.mainListJobs1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mainListJobs1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainListJobs1.Items = ((System.Collections.Generic.List<ConfigWindowsFormsControlLib.PropertyXElementJob>)(resources.GetObject("mainListJobs1.Items")));
             this.mainListJobs1.Location = new System.Drawing.Point(0, 0);
             this.mainListJobs1.Name = "mainListJobs1";
             this.mainListJobs1.Size = new System.Drawing.Size(660, 500);
@@ -48,12 +47,10 @@
             this.ClientSize = new System.Drawing.Size(660, 500);
             this.Controls.Add(this.mainListJobs1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConfigCopSMB";
             this.Text = "Конфигурация заданий";
-            this.Load += new System.EventHandler(this.ConfigCopSMB_Load);
             this.ResumeLayout(false);
 
         }
@@ -63,4 +60,3 @@
         private ConfigWindowsFormsControlLib.MainListJobs mainListJobs1;
     }
 }
-

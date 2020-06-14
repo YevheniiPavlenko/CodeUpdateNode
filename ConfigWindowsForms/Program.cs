@@ -16,7 +16,7 @@ namespace ConfigWindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ConfigCopSMB());
+            Application.Run(new WorkFoJobs());
         }
     }
 }

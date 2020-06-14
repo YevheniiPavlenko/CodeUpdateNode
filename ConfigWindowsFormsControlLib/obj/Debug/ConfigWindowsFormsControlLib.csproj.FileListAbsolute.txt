@@ -7,3 +7,8 @@ C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.MainListJobs.resources
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.XElementJobForList.resources
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.csprojAssemblyReference.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\bin\Debug\AllClass.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\bin\Debug\AllClass.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.csproj.CopyComplete
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\bin\Debug\ConfigClassLib.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\bin\Debug\ConfigClassLib.pdb

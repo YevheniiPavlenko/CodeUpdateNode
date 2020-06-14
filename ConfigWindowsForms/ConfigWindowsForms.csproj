@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ConfigWindowsForms.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,9 +57,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ConfigCopSMB.resx">
-      <DependentUpon>ConfigCopSMB.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="WorkFoJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkFoJobs.Designer.cs">
+      <DependentUpon>WorkFoJobs.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -65,7 +71,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="WorkFoJobs.resx">
+      <DependentUpon>WorkFoJobs.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,6 +90,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AllClass\AllClass.csproj">
+      <Project>{84b5bd1e-49ce-4acd-a162-4260c887b0c3}</Project>
+      <Name>AllClass</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConfigClassLib\ConfigClassLib.csproj">
       <Project>{a237961b-bfad-4edc-a535-f8d49afb6e51}</Project>
       <Name>ConfigClassLib</Name>
@@ -88,6 +102,9 @@
       <Project>{4b6b473a-ad27-4fa1-9751-cae838da6855}</Project>
       <Name>ConfigWindowsFormsControlLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconSettings.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

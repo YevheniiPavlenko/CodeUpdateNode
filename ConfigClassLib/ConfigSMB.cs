@@ -11,7 +11,7 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.XPath;
-using ConfigWindowsFormsControlLib;
+using AllClass;
 
 namespace ConfigClassLib
 {
@@ -129,10 +129,12 @@ namespace ConfigClassLib
                 cMaxValueIIN_JobsSMB = xListXElements_JobsSMB.Max(x => Convert.ToInt32(x.Attribute("Id").Value)) + 1;
             }
 
-            XElement xElementPatch = new XElement("JobsSMB");
+            XElement xElementPatch;
 
             foreach (PropertyXElementJob txpropertyXElementJobTemp in xpropertyXElementJobsTempate)
             {
+                xElementPatch = new XElement("JobsSMB");
+
                 xElementPatch.Add(new XAttribute("Id", cMaxValueIIN_JobsSMB));
                 xElementPatch.Add(new XAttribute("dirPatchInput",txpropertyXElementJobTemp._DirInput));
                 xElementPatch.Add(new XAttribute("dirPatchOutput", txpropertyXElementJobTemp._DirOutput));
@@ -140,11 +142,12 @@ namespace ConfigClassLib
                 if (ISExDir == true)
                 {
                     if (Directory.Exists(txpropertyXElementJobTemp._DirInput) & Directory.Exists(txpropertyXElementJobTemp._DirOutput)) {
-                        cMaxValueIIN_JobsSMB++;
                         xElementSMBConfig.Add(xElementPatch);
                     }
                 }
-                
+                cMaxValueIIN_JobsSMB++;
+
+                xElementSMBConfig.Add(xElementPatch);
             }
             
             ReCreateDocument.Save(NameFileSMBConfigDefault);

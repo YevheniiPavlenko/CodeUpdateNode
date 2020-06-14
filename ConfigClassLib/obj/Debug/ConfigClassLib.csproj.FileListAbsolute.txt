@@ -4,6 +4,6 @@ C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigClassLib\bin\Debug\Conf
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigClassLib\bin\Debug\ConfigClassLib.pdb
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigClassLib\obj\Debug\ConfigClassLib.dll
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigClassLib\obj\Debug\ConfigClassLib.pdb
-C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigClassLib\bin\Debug\ConfigWindowsFormsControlLib.dll
-C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigClassLib\bin\Debug\ConfigWindowsFormsControlLib.pdb
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigClassLib\obj\Debug\ConfigClassLib.csproj.CopyComplete
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigClassLib\bin\Debug\AllClass.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigClassLib\bin\Debug\AllClass.pdb

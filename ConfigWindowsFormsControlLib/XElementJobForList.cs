@@ -17,6 +17,11 @@ namespace ConfigWindowsFormsControlLib
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Событие которое обрабатывает нажатие на кнопки buttonDir
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonDir_Click(object sender, EventArgs e)
         {
             Button buttonTemp;
@@ -43,11 +48,26 @@ namespace ConfigWindowsFormsControlLib
                 switch (buttonTemp.Name)
                 {
                     case "buttonDirInput":
-                        textBox_Value_DirInput.Text = folderBrowserDialogTemp.SelectedPath;
+                        if (cxPropertyXElementJob._DirOutput != folderBrowserDialogTemp.SelectedPath)
+                        {
+                            textBox_Value_DirInput.Text = folderBrowserDialogTemp.SelectedPath;
+                            cxPropertyXElementJob._DirInput = folderBrowserDialogTemp.SelectedPath;
+                        } else
+                        {
+                            MessageBox.Show("Пути не должны совпадать");
+                        }
                         break;
 
                     case "buttonDirOutput":
-                        textBox_Value_DirOutput.Text = folderBrowserDialogTemp.SelectedPath;
+                        if (cxPropertyXElementJob._DirInput != folderBrowserDialogTemp.SelectedPath)
+                        {
+                            textBox_Value_DirOutput.Text = folderBrowserDialogTemp.SelectedPath;
+                            cxPropertyXElementJob._DirOutput = folderBrowserDialogTemp.SelectedPath;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Пути не должны совпадать");
+                        }
                         break;
                 }
             }

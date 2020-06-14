@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Runtime.CompilerServices;
+using AllClass;
+using ConfigClassLib;
 
 namespace ConfigWindowsFormsControlLib
 {
@@ -21,40 +23,51 @@ namespace ConfigWindowsFormsControlLib
             InitializeComponent();
         }
 
+        #region Deleting
+        /// <summary>
+        /// Deleting
+        /// </summary>
+        //public void Remove(PropertyXElementJob propertyXElementJobRemove)
+        //{
+        //    List<PropertyXElementJob> PropertyXElementJobTemplate = new List<PropertyXElementJob>();
+
+        //    foreach (PropertyXElementJob propertyXElementJobTemp in ProprtyXElementJobFMain)
+        //    {
+        //        //if (propertyXElementJobTemp == propertyXElementJobRemove) { ProprtyXElementJobFMain.Remove(propertyXElementJobTemp); }
+        //        if (propertyXElementJobTemp != propertyXElementJobRemove)
+        //        {
+        //            PropertyXElementJobTemplate.Add(propertyXElementJobTemp);
+        //        }
+        //    }
+
+        //    this.Items = PropertyXElementJobTemplate;
+        //}
+
+        /// <summary>
+        /// Deleting
+        /// </summary>
+        //public void Save(PropertyXElementJob propertyXElementJobSave)
+        //{
+        //    List<PropertyXElementJob> PropertyXElementJobTemplate = new List<PropertyXElementJob>();
+
+        //    foreach (PropertyXElementJob propertyXElementJobTemp in ProprtyXElementJobFMain)
+        //    {
+        //        if (propertyXElementJobTemp._Id == propertyXElementJobSave._Id) { PropertyXElementJobTemplate.Add(propertyXElementJobSave); }
+        //        else { PropertyXElementJobTemplate.Add(propertyXElementJobTemp); }
+        //    }
+
+        //    this.Items = PropertyXElementJobTemplate;
+        //}
+        #endregion
+
         private void MainListJobs_Load(object sender, EventArgs e)
         {
          
         }
 
-        public void Save(PropertyXElementJob propertyXElementJobSave)
-        {
-            List<PropertyXElementJob> PropertyXElementJobTemplate = new List<PropertyXElementJob>();
-
-            foreach (PropertyXElementJob propertyXElementJobTemp in ProprtyXElementJobFMain)
-            {
-                if (propertyXElementJobTemp._Id == propertyXElementJobSave._Id) { PropertyXElementJobTemplate.Add(propertyXElementJobSave); }
-                else  { PropertyXElementJobTemplate.Add(propertyXElementJobTemp); }
-            }
-
-            this.Items = PropertyXElementJobTemplate;
-        }
-
-        public void Remove(PropertyXElementJob propertyXElementJobRemove)
-        {
-            List<PropertyXElementJob> PropertyXElementJobTemplate = new List<PropertyXElementJob>();
-
-            foreach (PropertyXElementJob propertyXElementJobTemp in ProprtyXElementJobFMain)
-            {
-                //if (propertyXElementJobTemp == propertyXElementJobRemove) { ProprtyXElementJobFMain.Remove(propertyXElementJobTemp); }
-                if (propertyXElementJobTemp != propertyXElementJobRemove)
-                {
-                    PropertyXElementJobTemplate.Add(propertyXElementJobTemp);
-                }
-            }
-
-            this.Items = PropertyXElementJobTemplate;
-        }
-
+        /// <summary>
+        /// Свойство которое передает иль получает список с элементами PropertyXElementJob
+        /// </summary>
         public List<PropertyXElementJob> Items
         {
             get
@@ -70,12 +83,23 @@ namespace ConfigWindowsFormsControlLib
 
                 this.Controls.Clear();
 
-                int pointDrawPos = 10;
-
                 GroupBox groupBoxTemplate;
-                FlowLayoutPanel flowLayoutPanelTamplate  = new FlowLayoutPanel();
+                FlowLayoutPanel flowLayoutPanelTamplate = new FlowLayoutPanel();
                 Button cxbutton_Delete;
                 Button cxbutton_Save;
+
+                int pointDrawPos = 10;
+
+                Button cxbutton_NewRec = new Button();
+                cxbutton_NewRec.Name = "newRec";
+                cxbutton_NewRec.Text = "Добавить задание в конець задание";
+                cxbutton_NewRec.Top = pointDrawPos + 15;
+                cxbutton_NewRec.Size = new Size(200, 24);
+                cxbutton_NewRec.Click += Cxbutton_NewRec_Click;
+
+                flowLayoutPanelTamplate.Controls.Add(cxbutton_NewRec);
+
+                pointDrawPos = 55;
 
                 flowLayoutPanelTamplate.Location = this.Location;
                 flowLayoutPanelTamplate.Size = this.Size;
@@ -101,7 +125,7 @@ namespace ConfigWindowsFormsControlLib
                     groupBoxTemplate.Left = 10;
 
                     cxbutton_Delete = new Button();
-                    cxbutton_Delete.Name = "Button_" + xProprtyXElementJobAttachControl._Id.ToString();
+                    cxbutton_Delete.Name = "ButtonDelete_" + xProprtyXElementJobAttachControl._Id.ToString();
                     cxbutton_Delete.Text = "Удалить задание";
                     cxbutton_Delete.Top = 15;
                     cxbutton_Delete.Size = new Size(120, 24);
@@ -109,7 +133,7 @@ namespace ConfigWindowsFormsControlLib
                     cxbutton_Delete.Click += Cxbutton_Delete_Click;
 
                     cxbutton_Save = new Button();
-                    cxbutton_Save.Name = "Button_" + xProprtyXElementJobAttachControl._Id.ToString();
+                    cxbutton_Save.Name = "ButtonSave_" + xProprtyXElementJobAttachControl._Id.ToString();
                     cxbutton_Save.Text = "Сохранить задание";
                     cxbutton_Save.Top = 15;
                     cxbutton_Save.Size = new Size(120, 24);
@@ -131,10 +155,28 @@ namespace ConfigWindowsFormsControlLib
             }
         }
 
-        public void RefreshList() { 
-        
+        /// <summary>
+        /// Событие при нажатии на кнопку Cxbutton_NewRec
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Cxbutton_NewRec_Click(object sender, EventArgs e)
+        {
+            PropertyXElementJob XpropertyXElementJobTemplate = new PropertyXElementJob();
+            XpropertyXElementJobTemplate._Id = ProprtyXElementJobFMain.Count();
+            XpropertyXElementJobTemplate._DirInput = "Введите наиманование директории";
+            XpropertyXElementJobTemplate._DirOutput = "Введите наиманование директории";
+
+            ProprtyXElementJobFMain.Add(new PropertyXElementJob());
+
+            Items = ProprtyXElementJobFMain;
         }
 
+        /// <summary>
+        /// Событие при нажатии на кнопки с началм названий Cxbutton_Save
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Cxbutton_Save_Click(object sender, EventArgs e)
         {
             Control xcontrolTemplate;
@@ -143,10 +185,27 @@ namespace ConfigWindowsFormsControlLib
 
             if (xcontrolTemplate.Parent.Controls["XElementJobForList_" + xcontrolTemplate.Name.Split('_')[1]] != null)
             {
-                this.Save(((XElementJobForList)(xcontrolTemplate.Parent.Controls["XElementJobForList_" + xcontrolTemplate.Name.Split('_')[1]])).Value);
+                List<PropertyXElementJob> PropertyXElementJobTemplate = new List<PropertyXElementJob>();
+
+                foreach (PropertyXElementJob propertyXElementJobTemp in ProprtyXElementJobFMain)
+                {
+                    if (propertyXElementJobTemp._Id == ((XElementJobForList)(xcontrolTemplate.Parent.Controls["XElementJobForList_" + xcontrolTemplate.Name.Split('_')[1]])).Value._Id) 
+                    { PropertyXElementJobTemplate.Add(((XElementJobForList)(xcontrolTemplate.Parent.Controls["XElementJobForList_" + xcontrolTemplate.Name.Split('_')[1]])).Value); }
+                    else { PropertyXElementJobTemplate.Add(propertyXElementJobTemp); }
+                }
+
+                ConfigSMB.RemoveAllJobsForConfigSMBXML();
+                ConfigSMB.AddJobsForConfigSMBXML_forPropertyXElementJob(PropertyXElementJobTemplate);
+
+                Items = ConfigSMB.getInfo_XElemetJobForListAll();
             }
         }
 
+        /// <summary>
+        /// Событие при нажатии на кнопки с началм названий Cxbutton_Delete
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Cxbutton_Delete_Click(object sender, EventArgs e)
         {
             Control xcontrolTemplate;
@@ -155,13 +214,9 @@ namespace ConfigWindowsFormsControlLib
 
             if (xcontrolTemplate.Parent.Controls["XElementJobForList_" + xcontrolTemplate.Name.Split('_')[1]] != null)
             {
-                this.Remove(((XElementJobForList)(xcontrolTemplate.Parent.Controls["XElementJobForList_" + xcontrolTemplate.Name.Split('_')[1]])).Value);
-                xcontrolTemplate.Parent.Controls.Remove(xcontrolTemplate.Parent.Controls["XElementJobForList_" + xcontrolTemplate.Name.Split('_')[1]]);
+                ConfigSMB.RemoveJobsForConfigSMBXML(((XElementJobForList)(xcontrolTemplate.Parent.Controls["XElementJobForList_" + xcontrolTemplate.Name.Split('_')[1]])).Value._Id);
+                Items = ConfigSMB.getInfo_XElemetJobForListAll();
             }
-
-            //Form.ActiveForm.Text += '*';
-            //Form.ActiveForm.Show();
-           
         }
     }
 }

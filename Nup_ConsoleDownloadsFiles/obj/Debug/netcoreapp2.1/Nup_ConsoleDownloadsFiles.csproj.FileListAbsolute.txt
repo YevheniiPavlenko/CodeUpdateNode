@@ -17,7 +17,7 @@ C:\Users\sadmin\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\obj\Debug\netc
 C:\Users\sadmin\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\obj\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.AssemblyInfo.cs
 C:\Users\sadmin\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\obj\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.dll
 C:\Users\sadmin\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\obj\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.pdb
-C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\obj\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.csprojAssemblyReference.cache
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\bin\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.runtimeconfig.json
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\bin\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.runtimeconfig.dev.json
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\obj\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.genruntimeconfig.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\Nup_ConsoleDownloadsFiles\obj\Debug\netcoreapp2.1\Nup_ConsoleDownloadsFiles.csprojAssemblyReference.cache
