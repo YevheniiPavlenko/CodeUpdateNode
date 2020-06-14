@@ -1,6 +1,16 @@
 "# Software product for creating backups / Програмный продукт для создания бекапов" 
 
 ------------------------------------
+June 16, 2020, 02:53 a.m.
+
+------------------------------------
+June 16, 2020, 00:02 p.m.
+
+------------------------------------
+June 15, 2020, 20:00 p.m.
+
+
+------------------------------------
 June 12, 2020, 21:13 p.m.
 
 The conclusion is all the list of tasks. That is, in a separate user interface.

@@ -12,3 +12,4 @@ C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.csproj.CopyComplete
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\bin\Debug\ConfigClassLib.dll
 C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\bin\Debug\ConfigClassLib.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsFormsControlLib\obj\Debug\ConfigWindowsFormsControlLib.StatusJobs.resources

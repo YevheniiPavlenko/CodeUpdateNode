@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AllClass
 {
+    
     /// <summary>
     /// Структра которая нужна только для структуры Info_XElementJobForList
     /// </summary>
@@ -73,6 +74,81 @@ namespace AllClass
         {
             get { return DirOutput; }
             set { DirOutput = value; }
+        }
+    }
+
+    [System.Serializable]
+    public struct PropertyStatusJob
+    {
+        private int Id;
+        private string DirInput;
+        private string DirOutput;
+        private Int64 CountFiles;
+
+        public void Set(int xId, string xDirInput, string xDirOutput, Int64 xCountFiles) { Id = xId; DirInput = xDirInput; DirOutput = xDirOutput; CountFiles = xCountFiles; }
+
+        public static bool operator !=(PropertyStatusJob Own, PropertyStatusJob Old)
+        {
+            bool Rezult = false;
+
+            if (Own._Id != Old._Id || Own._DirInput != Old._DirInput || Own._DirOutput != Old._DirOutput || Own._CountFiles != Old._CountFiles) { Rezult = true; }
+
+            return Rezult;
+        }
+
+        public static bool Equals(PropertyStatusJob Own, PropertyStatusJob Old)
+        {
+            return Own._Id == Old._Id && Own._DirInput == Old._DirInput && Own._DirOutput == Old._DirOutput && Own._CountFiles == Old._CountFiles;
+        }
+
+        public static int GetHashCode(PropertyStatusJob Old)
+        {
+            return (Old._Id, Old._DirInput, Old._DirOutput, Old._CountFiles).GetHashCode();
+        }
+
+        public static bool operator ==(PropertyStatusJob Own, PropertyStatusJob Old)
+        {
+            bool Rezult = false;
+
+            if (Own._Id == Old._Id && Own._DirInput == Old._DirInput && Own._DirOutput == Old._DirOutput && Own._CountFiles == Old._CountFiles) { Rezult = true; }
+
+            return Rezult;
+        }
+
+        public PropertyStatusJob Value()
+        {
+            PropertyStatusJob propertyXStatusJob = new PropertyStatusJob();
+
+            propertyXStatusJob._Id = Id;
+            propertyXStatusJob._DirInput = DirInput;
+            propertyXStatusJob._DirOutput = DirOutput;
+            propertyXStatusJob._CountFiles = CountFiles;
+
+            return propertyXStatusJob;
+        }
+
+        public int _Id
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
+
+        public string _DirInput
+        {
+            get { return DirInput; }
+            set { DirInput = value; }
+        }
+
+        public string _DirOutput
+        {
+            get { return DirOutput; }
+            set { DirOutput = value; }
+        }
+
+        public Int64 _CountFiles
+        {
+            get { return CountFiles; }
+            set { CountFiles = value; }
         }
     }
 
