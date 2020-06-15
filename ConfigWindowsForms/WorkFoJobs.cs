@@ -5,9 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using AllClass;
 using ConfigClassLib;
 using ConfigWindowsFormsControlLib;
@@ -16,6 +18,7 @@ namespace ConfigWindowsForms
 {
     public partial class WorkFoJobs : Form
     {
+        bool xEnableMenu = false;
         //Task xtask = new Task();
         List<PropertyStatusJob> propertyStatusJobsLIst = new List<PropertyStatusJob>();
 
@@ -37,8 +40,16 @@ namespace ConfigWindowsForms
 
         private void работаСЗаданиямиToolStripMenuItem_Paint(object sender, PaintEventArgs e)
         {
-            стартToolStripMenuItem.Enabled = true;
-            стопToolStripMenuItem.Enabled = false;
+            if (xEnableMenu == false)
+            {
+                стартToolStripMenuItem.Enabled = true;
+                стопToolStripMenuItem.Enabled = false;
+            } else
+            {
+                стартToolStripMenuItem.Enabled = false;
+                стопToolStripMenuItem.Enabled = true;
+            }
+
         }
 
         //private void CopyFileDir(PropertyXElementJob propertyXElementJobTemplate)
@@ -57,6 +68,7 @@ namespace ConfigWindowsForms
 
         private void стартToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            xEnableMenu = true;
 
             if (this.Controls.Find("flowLayoutPanelTamplate1", true).Count() > 0)
             {
@@ -98,16 +110,44 @@ namespace ConfigWindowsForms
 
                 pointDrawPos += StatusJobsTemplate.Height + 20;
 
+                StatusJobsTemplate.GetValueToUserControl();
+
                 flowLayoutPanelTamplate.Controls.Add(groupBoxTemplate);
             }
 
             flowLayoutPanelTamplate.AutoScroll = true;
             this.panel1.Controls.Add(flowLayoutPanelTamplate);
+
+            foreach (PropertyXElementJob xProprtyXElementJobAttachControl in propertyXElementJobsList)
+            {
+                Control[] ListFindControl = this.panel1.Controls.Find(@"StatusJobsTemplate_" + xProprtyXElementJobAttachControl._Id.ToString(), true);
+                foreach(Control xcontrolTemp in ListFindControl)
+                {
+                    try { ((StatusJobs)(xcontrolTemp)).Start_Task(); }
+                    catch { return; }
+                    
+                }
+            }
         }
 
-        public void cxPaint()
+        private void стопToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            xEnableMenu = false;
 
+            List<PropertyXElementJob> propertyXElementJobsList = new List<PropertyXElementJob>();
+            propertyXElementJobsList = ConfigSMB.getInfo_XElemetJobForListAll();
+            foreach (PropertyXElementJob xProprtyXElementJobAttachControl in propertyXElementJobsList)
+            {
+                Control[] ListFindControl = this.panel1.Controls.Find(@"StatusJobsTemplate_" + xProprtyXElementJobAttachControl._Id.ToString(), true);
+                foreach (Control xcontrolTemp in ListFindControl)
+                {
+                    try { ((StatusJobs)(xcontrolTemp)).Stop_Task(); }
+                    catch { return; }
+
+                }
+            }
+
+            this.panel1.Controls.Clear();
         }
     }
 }

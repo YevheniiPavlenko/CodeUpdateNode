@@ -105,15 +105,16 @@
             // стартToolStripMenuItem
             // 
             this.стартToolStripMenuItem.Name = "стартToolStripMenuItem";
-            this.стартToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.стартToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.стартToolStripMenuItem.Text = "Старт";
             this.стартToolStripMenuItem.Click += new System.EventHandler(this.стартToolStripMenuItem_Click);
             // 
             // стопToolStripMenuItem
             // 
             this.стопToolStripMenuItem.Name = "стопToolStripMenuItem";
-            this.стопToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.стопToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.стопToolStripMenuItem.Text = "Стоп";
+            this.стопToolStripMenuItem.Click += new System.EventHandler(this.стопToolStripMenuItem_Click);
             // 
             // panel1
             // 

@@ -2,9 +2,6 @@
 <!--Block for copying jobs-->
 <!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <ConfigSMB>
-  <JobsSMB Id="0" dirPatchInput="C:\Users\Yevgenii.Pavlenko\Desktop\VPN" dirPatchOutput="C:\Users\Yevgenii.Pavlenko\Desktop\УКРТЕЛЕКОМ" />
-  <JobsSMB Id="1" dirPatchInput="C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin\Debug" dirPatchOutput="C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\ConfigWindowsForms\bin" />
-  <JobsSMB Id="2" dirPatchInput="C:\Users\Yevgenii.Pavlenko\source" dirPatchOutput="C:\Users" />
-  <JobsSMB Id="3" dirPatchInput="C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater" dirPatchOutput="C:\Users\Yevgenii.Pavlenko\source\repos" />
-  <JobsSMB Id="4" dirPatchInput="C:\Users\Yevgenii.Pavlenko\Desktop\VPN" dirPatchOutput="C:\Users\Yevgenii.Pavlenko\Desktop\УКРТЕЛЕКОМ" />
+  <JobsSMB Id="0" dirPatchInput="C:\Users\Yevgenii.Pavlenko\Desktop\VPN" dirPatchOutput="D:\_task1" />
+  <JobsSMB Id="1" dirPatchInput="C:\Users\Yevgenii.Pavlenko\Desktop\УКРТЕЛЕКОМ" dirPatchOutput="D:\_task2" />
 </ConfigSMB>
