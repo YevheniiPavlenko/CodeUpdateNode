@@ -1,6 +1,12 @@
 "# Software product for creating backups / Програмный продукт для создания бекапов" 
 
 ------------------------------------
+September 3, 2020, 19:07 p. m.
+
+
+restarting the project
+
+------------------------------------
 June 15, 2020, 19:43 p.m.
 
 tag –a v1.0.1506.2020

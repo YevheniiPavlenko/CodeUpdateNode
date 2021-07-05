@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-HtmlAgilityPack",
+      "appliesTo": "_cConsoleApp/NodDownloadConsoleApp/bin/Debug/HtmlAgilityPack.dll",
+      "type": "launch"
+    }
+  ]
+}

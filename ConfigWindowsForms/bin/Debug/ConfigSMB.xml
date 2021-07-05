@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!--Block for copying jobs-->
-<!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-<ConfigSMB>
-  <JobsSMB Id="0" dirPatchInput="C:\Users\Yevgenii.Pavlenko\Desktop\VPN" dirPatchOutput="D:\_task1" />
-  <JobsSMB Id="1" dirPatchInput="C:\Users\Yevgenii.Pavlenko\Desktop\УКРТЕЛЕКОМ" dirPatchOutput="D:\_task2" />
-</ConfigSMB>

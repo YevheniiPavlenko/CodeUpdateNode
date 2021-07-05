@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Block for copying jobs-->
+<!--- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<ConfigSMB>
+  <JobsSMB Id="0" dirPatchInput="C:\Users\Yevgenii.Pavlenko\Desktop\TrueCrypt" dirPatchOutput="D:\_task1" />
+</ConfigSMB>

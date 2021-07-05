@@ -1,0 +1,10 @@
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\obj\Debug\Lib_GetUriDonload.csproj.CoreCompileInputs.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\bin\Debug\Lib_GetUriDonload.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\bin\Debug\Lib_GetUriDonload.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\obj\Debug\Lib_GetUriDonload.csproj.CopyComplete
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\obj\Debug\Lib_GetUriDonload.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\obj\Debug\Lib_GetUriDonload.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_cConsoleApp\Lib_GetUriDonload\obj\Debug\Lib_GetUriDonload.csproj.AssemblyReference.cache

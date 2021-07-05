@@ -1,0 +1,50 @@
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csprojResolveAssemblyReference.cache
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\obj\Debug\NodUpdater.Form1.resources
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\obj\Debug\NodUpdater.Properties.Resources.resources
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csproj.GenerateResource.Cache
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\bin\Debug\NodUpdater.exe.config
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\bin\Debug\NodUpdater.exe
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\bin\Debug\NodUpdater.pdb
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\bin\Debug\HtmlAgilityPack.dll
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\bin\Debug\HtmlAgilityPack.pdb
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\bin\Debug\HtmlAgilityPack.xml
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\obj\Debug\NodUpdater.exe
+c:\users\yevgenii.pavlenko\documents\visual studio 2017\Projects\NodUpdater\NodUpdater\obj\Debug\NodUpdater.pdb
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\bin\Debug\NodUpdater.exe.config
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\bin\Debug\NodUpdater.exe
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\bin\Debug\NodUpdater.pdb
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\bin\Debug\HtmlAgilityPack.dll
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\bin\Debug\HtmlAgilityPack.xml
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csprojAssemblyReference.cache
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.Form1.resources
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.Properties.Resources.resources
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csproj.GenerateResource.cache
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csproj.CoreCompileInputs.cache
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csproj.CopyComplete
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.exe
+C:\Users\JtyGroup\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.Form1.resources
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.Properties.Resources.resources
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csproj.GenerateResource.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\bin\Debug\NodUpdater.exe.config
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\bin\Debug\NodUpdater.exe
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\bin\Debug\NodUpdater.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.exe
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csproj.CoreCompileInputs.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\NodUpdater\obj\Debug\NodUpdater.csprojAssemblyReference.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\bin\Debug\NodUpdater.exe.config
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\bin\Debug\NodUpdater.exe
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\bin\Debug\NodUpdater.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\obj\Debug\NodUpdater.csprojAssemblyReference.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\obj\Debug\NodUpdater.Form1.resources
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\obj\Debug\NodUpdater.Properties.Resources.resources
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\obj\Debug\NodUpdater.csproj.GenerateResource.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\obj\Debug\NodUpdater.csproj.CoreCompileInputs.cache
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\obj\Debug\NodUpdater.csproj.CopyComplete
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\obj\Debug\NodUpdater.exe
+C:\Users\Yevgenii.Pavlenko\source\repos\NodUpdater\_xTrashProject\NodUpdater\obj\Debug\NodUpdater.pdb

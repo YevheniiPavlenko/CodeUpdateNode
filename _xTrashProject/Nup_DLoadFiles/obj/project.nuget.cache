@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "R8NR1U14Z5Pgp5BnYI2iOc43sX19wTpQah54F6gAIAGWuOfngKJrN4JY/0/5dwr64HmRNo2ewvAh0QgdPjV/xA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Yevgenii.Pavlenko\\source\\repos\\NodUpdater\\_xTrashProject\\Nup_DLoadFiles\\Nup_DLoadFiles.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yevgenii.Pavlenko\\.nuget\\packages\\htmlagilitypack\\1.11.33\\htmlagilitypack.1.11.33.nupkg.sha512",
+    "C:\\Users\\Yevgenii.Pavlenko\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Yevgenii.Pavlenko\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
