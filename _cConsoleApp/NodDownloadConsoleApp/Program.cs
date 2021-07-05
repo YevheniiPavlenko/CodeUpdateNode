@@ -34,9 +34,6 @@ namespace NodDownloadConsoleApp
         static Uri xUri = new Uri(@"http://nod.gorod.nu/eset_upd/");
         static string xPatch = AppDomain.CurrentDomain.BaseDirectory + @"New";
         //-----------------------------------------------------------------------
-
-        
-
         static void Main(string[] args)
         {
             //string RxUri = AllProg.readPatchXMLConfig();--delete
